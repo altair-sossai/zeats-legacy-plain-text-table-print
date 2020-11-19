@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Zeats.Legacy.PlainTextTable.Print</id>
+    <version>1.0.0.0</version>
+    <description>Send print commands to the printer</description>
+    <authors>altairsossai@gmail.com</authors>
+    <owners>altairsossai</owners>
+    <projectUrl>https://github.com/altair-sossai/zeats-legacy-plain-text-table-print</projectUrl>
+    <iconUrl>https://zeatsbalancaautomatica.blob.core.windows.net/icons/nuget.png</iconUrl>
+  </metadata>
+</package>
