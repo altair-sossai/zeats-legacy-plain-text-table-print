@@ -1,8 +1,13 @@
-﻿namespace Zeats.Legacy.PlainTextTable.Print.Enums
+﻿using System.ComponentModel;
+
+namespace Zeats.Legacy.PlainTextTable.Print.Enums
 {
     public enum BarCodeType
     {
-        Ean13,
-        Code128
+        [Description("EAN 13")]
+        Ean13 = 0,
+
+        [Description("CODE 128")]
+        Code128 = 1
     }
 }
