@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using HtmlAgilityPack;
+using Zeats.Legacy.PlainTextTable.Print.Enums;
 
 namespace Zeats.Legacy.PlainTextTable.Print.Print
 {
@@ -7,9 +8,10 @@ namespace Zeats.Legacy.PlainTextTable.Print.Print
     {
         public readonly PrintOptions Options;
 
-        public PrintCollection(PrintOptions options, string html)
+        public PrintCollection(PrintOptions options, string html, BarCodeType barCodeType)
         {
             Options = options;
+            BarCodeType = barCodeType;
 
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
@@ -18,9 +20,13 @@ namespace Zeats.Legacy.PlainTextTable.Print.Print
                 Add(htmlNode);
         }
 
+        public BarCodeType BarCodeType { get; }
+
         private void Add(HtmlNode htmlNode)
         {
-            Add(new PrintItem(Options, htmlNode));
+            var printItem = new PrintItem(Options, htmlNode, BarCodeType);
+
+            Add(printItem);
         }
     }
 }

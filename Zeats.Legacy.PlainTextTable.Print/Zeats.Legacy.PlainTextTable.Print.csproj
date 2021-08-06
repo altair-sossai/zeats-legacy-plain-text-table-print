@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Enums\CutType.cs" />
     <Compile Include="Enums\FontSize.cs" />
+    <Compile Include="Enums\BarCodeType.cs" />
     <Compile Include="Enums\FontType.cs" />
     <Compile Include="Extensions\HtmlNodeExtensions.cs" />
     <Compile Include="Print\IPrintService.cs" />

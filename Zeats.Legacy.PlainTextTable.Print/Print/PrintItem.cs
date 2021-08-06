@@ -10,7 +10,7 @@ namespace Zeats.Legacy.PlainTextTable.Print.Print
         private readonly PrintOptions _options;
         private string _content;
 
-        public PrintItem(PrintOptions options, HtmlNode htmlNode)
+        public PrintItem(PrintOptions options, HtmlNode htmlNode, BarCodeType barCodeType)
         {
             _options = options;
 
@@ -19,6 +19,7 @@ namespace Zeats.Legacy.PlainTextTable.Print.Print
             Underline = htmlNode.Underline(false);
             FontSize = htmlNode.FontSize(FontSize.Normal);
             FontType = htmlNode.FontType();
+            BarCodeType = barCodeType;
             Content = $"{htmlNode.Content(TableWidth)}{Environment.NewLine}";
         }
 
@@ -27,6 +28,7 @@ namespace Zeats.Legacy.PlainTextTable.Print.Print
         public bool Underline { get; }
         public FontType FontType { get; }
         public FontSize FontSize { get; }
+        public BarCodeType BarCodeType { get; }
 
         public string Content
         {
